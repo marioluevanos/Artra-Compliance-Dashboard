@@ -1,0 +1,117 @@
+{
+    "tableHeaders": [
+        {
+            "header": "Due Date",
+            "prop": "dueDate"
+        },
+        {
+            "header": "TX Date",
+            "prop": "txDate"
+        },
+        {
+            "header": "TX ID",
+            "prop": "txId"
+        },
+        {
+            "header": "Receiver",
+            "prop": "receiver"
+        },
+        {
+            "header": "Sender",
+            "prop": "sender"
+        },
+        {
+            "header": "Amount",
+            "prop": "amount"
+        },
+        {
+            "header": "Assigned To",
+            "prop": "assigned"
+        }
+    ],
+    "tableData": [
+        {
+            "dueDate": "12/06/2019",
+            "txDate": "11/21/2019",
+            "txId": "F7B2",
+            "receiver": "Can Wagon",
+            "sender": "Tom Jones",
+            "amount": "$407.45",
+            "assigned": "Judy Miller",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "date": "12/03/2019",
+                            "action": "Account Review",
+                            "comments": "Account manager recommends terminating both parties"
+                        },
+                        {
+                            "date": "11/29/2019",
+                            "action": "Account Review",
+                            "comments": "Submitted findings to account manager"
+                        },
+                        {
+                            "date": "11/24/2019",
+                            "action": "History Check",
+                            "comments": "Merchant has 8 prior investigations for looping in last 30 days"
+                        },
+                        {
+                            "date": "11/23/2019",
+                            "action": "History Check",
+                            "comments": "Customer has two prior investigations for looping"
+                        }
+                    ]
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "header": "Date",
+                            "prop": "date"
+                        },
+                        {
+                            "header": "Name",
+                            "prop": "name"
+                        },
+                        {
+                            "header": "SAR Action",
+                            "prop": "sarAction"
+                        },
+                        {
+                            "header": "SAR Status",
+                            "prop": "sarStatus"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "date": "12/04/2019",
+                            "name": "James Jones",
+                            "sarAction": [
+                                "File Updated PSAR",
+                                "TSAR Pending",
+                                "Not Action Required"
+                            ],
+                            "sarStatus": "TSAR Pending"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

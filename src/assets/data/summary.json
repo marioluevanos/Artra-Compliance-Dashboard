@@ -1,0 +1,185 @@
+{
+    "tableHeaders": [
+        {
+            "prop": "date",
+            "header": "Date"
+        },
+        {
+            "prop": "txValue",
+            "header": "TX Value",
+            "format": "usd"
+        },
+        {
+            "prop": "txCount",
+            "header": "TX Count"
+        },
+        {
+            "prop": "lsarStatus",
+            "header": "LSAR Status",
+            "addLabel": "lsarStatusText"
+        },
+        {
+            "prop": "psarInitial",
+            "header": "PSAR Initial",
+            "addLabel": "psarInitialText"
+        },
+        {
+            "prop": "psarResolution",
+            "header": "PSAR Resolution <small>Open/Not Assigned</small>",
+            "capsulate": "psarCapsulate"
+        },
+        {
+            "prop": "tsar",
+            "header": "TSAR",
+            "linkTo": "tsarLinkTo"
+        }
+    ],
+    "tableData": [
+        {
+            "date": "12/06/19",
+            "txValue": 18160.98,
+            "txCount": 360,
+            "lsarStatus": 342,
+            "lsarStatusText": "Pending",
+            "psarInitial": 18,
+            "psarInitialText": "Pending",
+            "psarResolution": "18 / 18",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "12/05/19",
+            "txValue": 21941.39,
+            "txCount": 333,
+            "lsarStatus": 316,
+            "lsarStatusText": "Pending",
+            "psarInitial": 17,
+            "psarInitialText": "Pending",
+            "psarResolution": "17 / 13",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "12/04/19",
+            "txValue": 44284.65,
+            "txCount": 322,
+            "lsarStatus": 305,
+            "lsarStatusText": "Filed",
+            "psarInitial": 17,
+            "psarInitialText": "Filed",
+            "psarResolution": "15 / 9",
+            "psarCapsulate": true,
+            "tsar": "1 Pending",
+            "tsarLinkTo": "investigations/F7B2"
+        },
+        {
+            "date": "12/03/19",
+            "txValue": 29239.89,
+            "txCount": 153,
+            "lsarStatus": 145,
+            "lsarStatusText": "Filed",
+            "psarInitial": 8,
+            "psarInitialText": "Filed",
+            "psarResolution": "6 / 0",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "12/02/19",
+            "txValue": 40101.54,
+            "txCount": 324,
+            "lsarStatus": 307,
+            "lsarStatusText": "Filed",
+            "psarInitial": 17,
+            "psarInitialText": "Filed",
+            "psarResolution": "12 / 0",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "12/01/19",
+            "txValue": 26699.07,
+            "txCount": 173,
+            "lsarStatus": 164,
+            "lsarStatusText": "Filed",
+            "psarInitial": 9,
+            "psarInitialText": "Filed",
+            "psarResolution": "5 / 0",
+            "psarCapsulate": true,
+            "tsar": "1 Filed",
+            "tsarLinkTo": "summary"
+        },
+        {
+            "date": "11/30/19",
+            "txValue": 37813.61,
+            "txCount": 177,
+            "lsarStatus": 168,
+            "lsarStatusText": "Filed",
+            "psarInitial": 9,
+            "psarInitialText": "Filed",
+            "psarResolution": "5 / 0",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "11/29/19",
+            "txValue": 44751.93,
+            "txCount": 127,
+            "lsarStatus": 120,
+            "lsarStatusText": "Filed",
+            "psarInitial": 7,
+            "psarInitialText": "Filed",
+            "psarResolution": "3 / 0",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "11/28/19",
+            "txValue": 36406.84,
+            "txCount": 330,
+            "lsarStatus": 313,
+            "lsarStatusText": "Filed",
+            "psarInitial": 17,
+            "psarInitialText": "Filed",
+            "psarResolution": "5 / 0",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "11/27/19",
+            "txValue": 36406.84,
+            "txCount": 240,
+            "lsarStatus": 228,
+            "lsarStatusText": "Filed",
+            "psarInitial": 12,
+            "psarInitialText": "Filed",
+            "psarResolution": "2 / 0",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "11/26/19",
+            "txValue": 46464.94,
+            "txCount": 203,
+            "lsarStatus": 192,
+            "lsarStatusText": "Filed",
+            "psarInitial": 11,
+            "psarInitialText": "Filed",
+            "psarResolution": "1 / 0",
+            "psarCapsulate": true,
+            "tsar": 0
+        },
+        {
+            "date": "11/25/19",
+            "txValue": 27984.91,
+            "txCount": 325,
+            "lsarStatus": 308,
+            "lsarStatusText": "Filed",
+            "psarInitial": 17,
+            "psarInitialText": "Filed",
+            "psarResolution": "0 / 0",
+            "psarCapsulate": true,
+            "tsar": 0
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "artra-compliance-dashboard",
+  "version": "1.0.0",
+  "description": "Compliance Dashboard",
+  "author": "Mario Luevanos",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "gsap": "^3.0.4",
+    "nuxt": "^2.0.0",
+    "vue-good-table": "^2.18.1",
+    "vuejs-datepicker": "^1.6.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
+  }
+}

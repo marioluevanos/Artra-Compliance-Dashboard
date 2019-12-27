@@ -1,0 +1,178 @@
+{
+    "tableHeaders": [
+        {
+            "prop": "alertId",
+            "header": "Alert ID"
+        },
+        {
+            "prop": "type",
+            "header": "Type"
+        },
+        {
+            "prop": "startDate",
+            "header": "Start Date"
+        },
+        {
+            "prop": "endDate",
+            "header": "End Date"
+        },
+        {
+            "prop": "txCount",
+            "header": "TX Count"
+        },
+        {
+            "prop": "partyCount",
+            "header": "Party Count"
+        },
+        {
+            "prop": "txTotal",
+            "header": "Transaction Total",
+            "format": "usd"
+        }
+    ],
+    "tableData": [
+        {
+            "alertId": "B235",
+            "type": "Structuring",
+            "startDate": "12/03/2019",
+            "endDate": "12/05/2019",
+            "txCount": "3",
+            "partyCount": "2",
+            "txTotal": 29400.00,
+            "details": [
+                {
+                    "title": "Parties",
+                    "headers": [
+                        {
+                            "prop": "sender",
+                            "header": "Sender"
+                        },
+                        {
+                            "prop": "receiver",
+                            "header": "Receiver"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "sender": "MJ Deliver",
+                            "receiver": "Can Distributors"
+                        }
+                    ]
+                },
+                {
+                    "title": "Transactions",
+                    "headers": [
+                        {
+                            "prop": "txId",
+                            "header": "TX ID"
+                        },
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "amount",
+                            "header": "Amount"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "txId": "F345",
+                            "date": "12/05/2019",
+                            "amount": "$9,800.00"
+                        },
+                        {
+                            "txId": "635A",
+                            "date": "12/04/2019",
+                            "amount": "$9,800.00"
+                        },
+                        {
+                            "txId": "B3C4",
+                            "date": "12/03/2019",
+                            "amount": "$9,800.00"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "alertId": "B234",
+            "type": "Structuring",
+            "startDate": "11/29/2019",
+            "endDate": "11/29/2019",
+            "txCount": "6",
+            "partyCount": "2",
+            "txTotal": 12000.00,
+            "details": [
+                {
+                    "title": "Parties",
+                    "headers": [
+                        {
+                            "prop": "sender",
+                            "header": "Sender"
+                        },
+                        {
+                            "prop": "receiver",
+                            "header": "Receiver"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "sender": "Bud Room",
+                            "receiver": "Samona Farms"
+                        }
+                    ]
+                },
+                {
+                    "title": "Transactions",
+                    "headers": [
+                        {
+                            "prop": "txId",
+                            "header": "TX ID"
+                        },
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "amount",
+                            "header": "Amount"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "txId": "03F5",
+                            "date": "11/29/2019",
+                            "amount": "$2,000.00"
+                        },
+                        {
+                            "txId": "DF45",
+                            "date": "11/29/2019",
+                            "amount": "$2,000.00"
+                        },
+                        {
+                            "txId": "34E5",
+                            "date": "11/29/2019",
+                            "amount": "$2,000.00"
+                        },
+                        {
+                            "txId": "AA92",
+                            "date": "11/29/2019",
+                            "amount": "$2,000.00"
+                        },
+                        {
+                            "txId": "4529",
+                            "date": "11/29/2019",
+                            "amount": "$2,000.00"
+                        },
+                        {
+                            "txId": "B4F6",
+                            "date": "11/29/2019",
+                            "amount": "$2,000.00"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

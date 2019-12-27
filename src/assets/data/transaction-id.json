@@ -1,0 +1,91 @@
+{
+    "sender": "Mission Dispensary",
+    "tableHeaders": [
+        {
+            "header": "Date",
+            "prop": "date"
+        },
+        {
+            "header": "Time",
+            "prop": "time"
+        },
+        {
+            "header": "TX ID",
+            "prop": "txId"
+        },
+        {
+            "header": "Amount",
+            "prop": "amount",
+            "format": "usd"
+        },
+        {
+            "header": "PSAR Status",
+            "prop": "psarStatus"
+        }
+    ],
+    "tableData": [
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 230.00,
+            "psarStatus": "Open"
+        },
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 410.40,
+            "psarStatus": "Open"
+        },
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 532.42,
+            "psarStatus": "Open"
+        },
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 450.99,
+            "psarStatus": "Open"
+        },
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 110.00,
+            "psarStatus": "Open"
+        },
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 124.10,
+            "psarStatus": "Resolved"
+        },
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 150.50,
+            "psarStatus": "Resolved"
+        },
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 160.59,
+            "psarStatus": "N/A"
+        },
+        {
+            "date": "12/21/19",
+            "time": "08:35",
+            "txId": "***FR14",
+            "amount": 589.90,
+            "psarStatus": "Resolved"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+$dir: '/fonts/mena-grotesk';
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3abe57");
+
+@font-face {
+    font-family: 'MenaGrotesk-Regular';
+    src: url($dir + '/3ABE57_0_0.eot');
+    src: 
+        url($dir + '/3ABE57_0_0.eot?#iefix') format('embedded-opentype'),
+        url($dir + '/3ABE57_0_0.woff2') format('woff2'),
+        url($dir + '/3ABE57_0_0.woff') format('woff'),
+        url($dir + '/3ABE57_0_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MenaGrotesk-Medium';
+    src:  url($dir + '/3ABE57_1_0.eot');
+    src: 
+        url($dir + '/3ABE57_1_0.eot?#iefix') format('embedded-opentype'),
+        url($dir + '/3ABE57_1_0.woff2') format('woff2'),
+        url($dir + '/3ABE57_1_0.woff') format('woff'),
+        url($dir + '/3ABE57_1_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MenaGrotesk-Bold';
+    src: 
+        url($dir + '/3ABE57_2_0.eot');
+    src: 
+        url($dir + '/3ABE57_2_0.eot?#iefix') format('embedded-opentype'),
+        url($dir + '/3ABE57_2_0.woff2') format('woff2'),
+        url($dir + '/3ABE57_2_0.woff') format('woff'),
+        url($dir + '/3ABE57_2_0.ttf') format('truetype');
+}

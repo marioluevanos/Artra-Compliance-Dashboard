@@ -1,0 +1,25 @@
+{
+  "name": "artra-compliance-dashboard",
+  "version": "1.0.0",
+  "description": "Compliance Dashboard",
+  "scripts": {
+    "dev": "cd \"src\" && npm run dev",
+    "build": "npm run cleanfiles && npm run build:nuxt && npm run copyfiles",
+    "serve": "firebase serve --only functions,hosting",
+    "deploy": "firebase deploy",
+    "generate": "cd \"src\" && npm run generate",
+    "cleanfiles": "npm run cleanclient && npm run cleanserver",
+    "cleanclient": "rimraf client/*",
+    "cleanserver": "rimraf server/nuxt/**",
+    "copyfiles": "npm run copydist && npm run copystatic && npm run copybuild",
+    "copybuild": "cp -R src/.nuxt/ server/nuxt/",
+    "copydist": "cp -R src/.nuxt/dist/ client",
+    "copystatic": "cp -R src/static/ client",
+    "build:nuxt": "cd \"src\" && npm run build"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.1",
+    "rimraf": "^2.7.1"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,229 @@
+{
+    "tableHeaders": [
+        {
+            "prop": "dueDate",
+            "header": "Due Date"
+        },
+        {
+            "prop": "txDate",
+            "header": "TX Date"
+        },
+        {
+            "prop": "txId",
+            "header": "TX ID"
+        },
+        {
+            "prop": "receiver",
+            "header": "Receiver"
+        },
+        {
+            "prop": "sender",
+            "header": "Sender"
+        },
+        {
+            "prop": "amount",
+            "header": "Amount",
+            "format": "usd"
+        },
+        {
+            "prop": "assigned",
+            "header": "Assigned To",
+            "capsulate": "assigned"
+        }
+    ],
+    "tableData": [
+        {
+            "dueDate": "12/21/2019",
+            "txDate": "12/6/2019",
+            "txId": "8392",
+            "receiver": "The Spot",
+            "sender": "Dave Black",
+            "amount": 134.22,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/21/2019",
+            "txDate": "12/6/2019",
+            "txId": "F8E9",
+            "receiver": "Harvest Room",
+            "sender": "Mike Jones",
+            "amount": 210.25,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/21/2019",
+            "txDate": "12/6/2019",
+            "txId": "CC90",
+            "receiver": "Harvest Room",
+            "sender": "Mike Jones",
+            "amount": 210.25,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/21/2019",
+            "txDate": "12/6/2019",
+            "txId": "049A",
+            "receiver": "The MJ Lounge",
+            "sender": "Steve Smith",
+            "amount": 230.90,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/21/2019",
+            "txDate": "12/6/2019",
+            "txId": "7876",
+            "receiver": "CBD Online",
+            "sender": "Ted Thomas",
+            "amount": 242.07,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/21/2019",
+            "txDate": "12/6/2019",
+            "txId": "7876",
+            "receiver": "MJ Health",
+            "sender": "June Jones",
+            "amount": 133.04,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/21/2019",
+            "txDate": "12/6/2019",
+            "txId": "218D",
+            "receiver": "Oak Delivery",
+            "sender": "Ralph Misner",
+            "amount": 102.92,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/21/2019",
+            "txDate": "12/6/2019",
+            "txId": "D07B",
+            "receiver": "MediCan",
+            "sender": "Ron White",
+            "amount": 197.82,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/20/2019",
+            "txDate": "12/5/2019",
+            "txId": "BFA5",
+            "receiver": "Health Center, LLC",
+            "sender": "James Jefferson",
+            "amount": 89.60,
+            "assigned": "Unassigned"
+        },
+        {
+            "dueDate": "12/20/2019",
+            "txDate": "12/5/2019",
+            "txId": "9894",
+            "receiver": "The MJ Lounge",
+            "sender": "Greg Green",
+            "amount": 114.30,
+            "assigned": "James Jones",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "date": "12/06/2019",
+                            "action": "Purchase Check",
+                            "comments": "Product purchase confirmed"
+                        },
+                        {
+                            "date": "12/05/2019",
+                            "action": "History Check",
+                            "comments": "Customer has no prior investigations"
+                        },
+                        {
+                            "date": "12/05/2019",
+                            "action": "History Check",
+                            "comments": "Merchant has 3 resolved investigations"
+                        }
+                    ]
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "date": "12/05/2019",
+                            "name": "James Jones",
+                            "sarAction": [
+                                "File Updated PSAR",
+                                "TSAR Status",
+                                "Pending"
+                            ],
+                            "sarStatus": "Updated PSAR Pending"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "dueDate": "12/20/2019",
+            "txDate": "12/5/2019",
+            "txId": "6135",
+            "receiver": "Misson Dispensary",
+            "sender": "Ally McCord",
+            "amount": 102.18,
+            "assigned": "Alice Wonder",
+            "details": [
+                {
+                    "title": "History"
+                },
+                {
+                    "title": "Decision"
+                }
+            ]
+        },
+        {
+            "dueDate": "12/20/2019",
+            "txDate": "12/5/2019",
+            "txId": "21FD",
+            "receiver": "SC Remedies",
+            "sender": "Bo Diddly",
+            "amount": 273.80,
+            "assigned": "Judy Miller",
+            "details": [
+                {
+                    "title": "History"
+                },
+                {
+                    "title": "Decision"
+                }
+            ]
+        }
+    ]
+}

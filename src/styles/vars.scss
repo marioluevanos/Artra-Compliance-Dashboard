@@ -1,0 +1,26 @@
+// Fonts
+// -----------------------------------------
+$font-regular: 'MenaGrotesk-Regular', sans-serif;
+$font-bold: 'MenaGrotesk-Bold', sans-serif;
+$font-medium: 'MenaGrotesk-Medium', sans-serif;
+
+// Breakpoints
+// -----------------------------------------
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1023px;
+$breakpoint-desktop: 1920px;
+$global-max-width: none;
+
+// Color Pallet
+// -----------------------------------------
+
+$color-off-white: #F2F4F5;
+$color-primary: #2E9959;
+$color-secondary: #cc8219;
+$color-green-light: #ACF8CB;
+$color-navy-dark: #003254;
+$color-gray: #546a78;
+$color-gray-light: lighten(#D9E0E4, 6%);
+
+$color-green: $color-primary;
+
