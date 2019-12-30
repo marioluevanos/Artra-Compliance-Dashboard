@@ -6,7 +6,7 @@
 
 <script>
 import investigationsId from '@/assets/data/investigation-id.json'
-import AppTable from '@/components/AppTable/index.vue'
+import AppTable from '@/components/AppTable/AppTable.vue'
 import {mapGetters} from 'vuex'
 
 export default {

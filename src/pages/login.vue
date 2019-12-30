@@ -179,6 +179,7 @@ export default {
 }
 
 .form button {
+    justify-content: center;
     margin-top: vw(15);
 }
 
@@ -187,7 +188,7 @@ export default {
 }
 
 .form .input:focus:placeholder-shown {
-    background: rgba($color-green-light, 0.15);
+    background: rgba($color-primary-light, 0.15);
     height: 100%;
 }
 

@@ -15,12 +15,11 @@ $global-max-width: none;
 // -----------------------------------------
 
 $color-off-white: #F2F4F5;
-$color-primary: #2E9959;
+$color-primary: #00993d;
 $color-secondary: #cc8219;
-$color-green-light: #ACF8CB;
+$color-primary-light: lighten($color-primary, 40%);
+
 $color-navy-dark: #003254;
 $color-gray: #546a78;
-$color-gray-light: lighten(#D9E0E4, 6%);
-
-$color-green: $color-primary;
+$color-gray-light: lighten(#D9E0E4, 5.25%);
 

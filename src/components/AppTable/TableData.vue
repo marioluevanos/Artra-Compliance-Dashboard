@@ -1,6 +1,7 @@
 <template>
     <td v-if='linkTo'>
         <router-link :to='linkTo'>
+            <!-- TODO: Make a better way to detect pending & file or other statuses -->
             <span 
                 :class='{
                     "pending": (/Pending/g.test(innerText)),
@@ -10,9 +11,7 @@
         </router-link>
     </td>
     <td v-else>
-        <span
-            :class='{ "table-capsule font-medium": capsulate && cellData.entry.details }'
-            v-html='innerText'/>
+        <span :class='{ "table-capsule": capsulate }' v-html='innerText'/>
     </td>
 </template>
 

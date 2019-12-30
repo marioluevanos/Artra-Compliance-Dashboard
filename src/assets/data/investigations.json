@@ -180,11 +180,7 @@
                         {
                             "date": "12/05/2019",
                             "name": "James Jones",
-                            "sarAction": [
-                                "File Updated PSAR",
-                                "TSAR Status",
-                                "Pending"
-                            ],
+                            "sarAction": "File Updated PSAR",
                             "sarStatus": "Updated PSAR Pending"
                         }
                     ]
@@ -201,10 +197,44 @@
             "assigned": "Alice Wonder",
             "details": [
                 {
-                    "title": "History"
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
                 },
                 {
-                    "title": "Decision"
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": []
                 }
             ]
         },
@@ -218,10 +248,44 @@
             "assigned": "Judy Miller",
             "details": [
                 {
-                    "title": "History"
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
                 },
                 {
-                    "title": "Decision"
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": []
                 }
             ]
         }

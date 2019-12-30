@@ -1,9 +1,12 @@
 <template>
     <div>
-        <form class='app-table-filter'>
-            <input placeholder='Filter results' v-model='searchQuery'/>
+        <div class='app-table-filter'>
+            <input 
+                class='input-state' 
+                placeholder='Filter results' 
+                v-model='searchQuery'/>
             <AppIcon type='search' size='small'/>
-        </form>
+        </div>
         <table class='app-table'>
             <thead>
                 <tr>
@@ -25,12 +28,12 @@
                 </tr>
             </thead>
             <TableBody
+                :onSortClick='onSortClick'
                 v-for='(entry, idx) in filteredData'
-                :entry='entry' 
+                :entry='entry'
+                :rowIndex='idx' 
                 :tableHeaders='tableHeaders'
-                :key='idx + "table-body"'>
-                <slot/>
-            </TableBody>
+                :key='idx + "table-body"'/>
         </table>
     </div>
 </template>
@@ -56,7 +59,8 @@ export default {
         return {
             sortKey: '',
             sortOrders,
-            searchQuery: ''
+            searchQuery: '',
+            onSortClick: false
         }
     },
     computed: {
@@ -89,6 +93,9 @@ export default {
         sortBy(key) {
             this.sortKey = key
             this.sortOrders[key] = this.sortOrders[key] * -1
+
+            // This is only used to pass down to child components
+            this.onSortClick = !this.onSortClick
         }
     }
 }
@@ -133,27 +140,6 @@ export default {
         opacity: 0.3;
         z-index: 1;
     }
-
-    input:focus {
-        color: $color-navy-dark;
-        background: white;
-        background: rgba($color-green-light, 0.25);
-        border: 1px solid $color-green;
-    }
-
-    input:focus + .app-icon {
-        stroke: $color-green;
-        opacity: 1;
-    }
-
-    input::placeholder  {
-        color: rgba($color-navy-dark, 0.3);
-        font-family: $font-medium;
-    }
-
-    input:focus::placeholder  {
-        color: rgba($color-green, 1);
-    }
 }
 
 /* 
@@ -181,7 +167,7 @@ export default {
     @include base-font(regular);
     background: white;
     position: sticky;
-    top: vw(89);
+    top: vw(90);
     z-index: 2;
     box-shadow: 0 1px 1px rgba(black, 0.15);
     -webkit-user-select: none;
@@ -226,7 +212,7 @@ export default {
 */ 
 
 .app-table .app-table-header.active {
-    color: $color-green;
+    color: $color-primary;
 }
 
 .app-table .app-table-header.active .icon-sort {
@@ -239,7 +225,7 @@ export default {
 
     &.dsc .top,
     &.asc .bottom {
-        fill: $color-green;
+        fill: $color-primary;
     }
 }
 

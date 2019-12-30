@@ -9,7 +9,7 @@
 
 <script>
 import transactionData from '@/assets/data/transaction-id.json'
-import AppTable from '@/components/AppTable/index.vue'
+import AppTable from '@/components/AppTable/AppTable.vue'
 
 export default {
     name: 'Transactions',

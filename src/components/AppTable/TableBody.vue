@@ -8,18 +8,24 @@
                 :key='Math.random() * hIdx'
                 :cellData='{ entry, header }'/>
             <td v-if='entry.details' @click='toggleDetails' class='table-button'>
-                <ToolTip message='View Details'/>
+                <ToolTip :message='detailsActive ? "Close" : "View Details"'/>
                 <AppIcon size='small' :type='detailsActive ? "close" : "show-list"'/>
             </td>
         </tr>
-        <tr class='table-body-details' v-if='entry.details && detailsActive'>
+        <tr class='table-body-details' v-if='entry.details && detailsActive' ref='tableBodyDetails'>
             <td :colspan='tableHeaders.length'>
-                <div class='detail-entry' v-for='(details, idx) in entry.details' :key='setKey(idx, "details")'>
+                <div 
+                    class='detail-entry' 
+                    v-for='(details, detailsIndex) in entry.details' 
+                    :key='setKey(detailsIndex, "details")'>
                     <table>
                         <caption class='details-title font-bold' v-html='details.title'/>
                         <thead>
                             <tr>
-                                <th class='font-bold color-gray' v-for='(headers, idx) in details.headers' :key='setKey(idx)' v-html='headers.header'/>
+                                <th class='font-bold color-gray' 
+                                    v-for='(headers, headerIdx) in details.headers' 
+                                    :key='setKey(headerIdx)' 
+                                    v-html='headers.header'/>
                             </tr>
                         </thead>
                         <tbody v-for='(detail, idx) in details.data' :key='setKey(idx)'>
@@ -30,7 +36,11 @@
                             </tr>
                         </tbody>
                     </table>
-                    <slot/>
+                    <TableInput
+                        @onSaveEntryClick='onSaveEntryClick' 
+                        :rowIndex='rowIndex'
+                        :detailsIndex='detailsIndex'
+                        :inputType='details.title'/>
                 </div><!-- end -->
             </td>
         </tr>
@@ -41,24 +51,48 @@
 import AppIcon from '@/components/AppIcon.vue'
 import ToolTip from '@/components/ToolTip.vue'
 import TableData from '@/components/AppTable/TableData.vue'
+import TableInput from '@/components/AppTable/TableInput.vue'
 
 export default {
-    name: 'table-row',
+    name: 'table-body',
     components: {
         AppIcon,
         ToolTip,
-        TableData
+        TableData,
+        TableInput
     },
     props: {
         tableHeaders: Array,
-        entry: Object
+        entry: Object,
+        onSortClick: Boolean,
+        rowIndex: Number
+    },
+    watch: {
+        onSortClick(val) {
+            this.detailsActive = false
+        }
     },
     data() {
         return {
             detailsActive: false,
+            activeDetailsIndex: null
         }
     },
     methods: {
+        animateNewEntry({detailsIndex}) {
+
+            const animationClass = 'new-entry'
+            setTimeout(() => { // needs to be on next tick
+                const {tableBodyDetails} = this.$refs
+                const details = tableBodyDetails.querySelectorAll('.detail-entry')
+                const newEntry = details[detailsIndex].querySelector('tbody') // gets the first node
+                newEntry.addEventListener('animationend', () => newEntry.classList.remove(animationClass))
+                newEntry.classList.add(animationClass)
+            }, 250) 
+        },
+        onSaveEntryClick(indexes) {
+            this.animateNewEntry(indexes)
+        },
         toggleDetails(event) {
             this.detailsActive = !this.detailsActive
         },
@@ -81,7 +115,6 @@ export default {
 
 .table-body {
     position: relative;
-    // @include base-font(small);
 }
 
 .table-body:nth-child(odd) {
@@ -89,9 +122,8 @@ export default {
 }
 
 .table-body:not(.active):hover {
-    background: rgba($color-green-light, 0.5);
+    background: rgba($color-primary-light, 0.25);
 }
-
 
 /* 
     Table Details
@@ -136,6 +168,24 @@ export default {
 
 .table-body-details tbody:nth-of-type(odd) {
     background: rgba($color-gray, 0.05);
+}
+
+.table-body-details tbody.new-entry {
+    animation: new-entry 1s cubic-bezier(0.39, 0.575, 0.565, 1); //ease-out-sine
+}
+
+@keyframes new-entry {
+    0% {
+        box-shadow: inset 0 0 0 0 $color-primary;
+    }
+    50% {
+        color: $color-primary;
+        box-shadow: inset 0 0 0 30px rgba($color-primary-light, 0.6);
+    }
+    100% {
+        color: $color-navy-dark;
+        box-shadow: inset 0 0 0 0 $color-primary-light;
+    }
 }
 
 /* 

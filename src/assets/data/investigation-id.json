@@ -102,11 +102,7 @@
                         {
                             "date": "12/04/2019",
                             "name": "James Jones",
-                            "sarAction": [
-                                "File Updated PSAR",
-                                "TSAR Pending",
-                                "Not Action Required"
-                            ],
+                            "sarAction": "File Updated PSAR",
                             "sarStatus": "TSAR Pending"
                         }
                     ]

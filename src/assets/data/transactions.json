@@ -29,7 +29,8 @@
             "merchant": "The Spot",
             "txValue": 240.11,
             "txCount": 103,
-            "psarsOpen": 1
+            "psarsOpen": 1,
+            "linkTo": "transactions/the-spot"
         },
         {
             "date": "12/03/19",
@@ -44,49 +45,48 @@
             "merchant": "Haverst Room",
             "txValue": 210.33,
             "txCount": 11,
-            "psarsOpen": 0
+            "psarsOpen": 0,
+            "linkTo": "transactions/harvest-room"
         },
         {
             "date": "12/03/19",
             "merchant": "The MJ Lounge",
             "txValue": 510.10,
             "txCount": 31,
-            "psarsOpen": 0
+            "psarsOpen": 0,
+            "linkTo": "transactions/the-mj-lounge"
         },
         {
             "date": "12/03/19",
             "merchant": "CDB Online",
             "txValue": 290.10,
             "txCount": 15,
-            "psarsOpen": 0
+            "psarsOpen": 0,
+            "linkTo": "transactions/cbd-online"
         },
         {
             "date": "12/03/19",
             "merchant": "MediCan",
             "txValue": 140.11,
             "txCount": 40,
-            "psarsOpen": 0
+            "psarsOpen": 0,
+            "linkTo": "transactions/medican"
         },
         {
             "date": "12/03/19",
             "merchant": "SC Remedies",
             "txValue": 153.00,
             "txCount": 50,
-            "psarsOpen": 0
-        },
-        {
-            "date": "12/03/19",
-            "merchant": "B235",
-            "txValue": 230.42,
-            "txCount": 100,
-            "psarsOpen": 0
+            "psarsOpen": 0,
+            "linkTo": "transactions/sc-remedies"
         },
         {
             "date": "12/03/19",
             "merchant": "Oak Delivery",
             "txValue": 310.33,
             "txCount": 14,
-            "psarsOpen": 0
+            "psarsOpen": 0,
+            "linkTo": "transactions/oak-delivery"
         }
     ]
 }

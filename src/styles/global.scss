@@ -11,12 +11,12 @@ body {
     color: $color-navy-dark;
     ::selection {
         color: $color-primary;
-        background: rgba($color-primary, 0.5);
+        background: rgba($color-primary-light, 0.5);
     }
 
     ::-moz-selection {
         color: $color-primary;
-        background: rgba($color-primary, 0.5);
+        background: rgba($color-primary-light, 0.5);
     }
 }
 
@@ -89,10 +89,8 @@ button {
     padding: vw(10) vw(20);
     transition: 0.10s linear;
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: $font-medium;
-    outline-color: $color-green;
+    outline-color: $color-primary;
     .app-icon {
         margin-right: vw(5);
     }
@@ -117,10 +115,10 @@ button.button-default {
         stroke: $color-off-white;
     }
     &:not([disabled]):hover {
-        color: $color-green-light;
+        color: $color-primary-light;
         background: darken($color-navy-dark, 5%);
         .app-icon {
-            stroke: $color-green-light;
+            stroke: $color-primary-light;
         }
     }
 
@@ -131,11 +129,11 @@ button.button-default {
 }
 
 button.button-primary {
-    border: 1px solid $color-green;
-    background: $color-green;
+    border: 1px solid $color-primary;
+    background: $color-primary;
     color: $color-off-white;
 
-    $disabled-bg-color: rgba(darken($color-green, 5%), 0.1);
+    $disabled-bg-color: rgba(darken($color-primary, 5%), 0.1);
     $disabled-color: rgba($color-gray, 0.5);
     &[disabled] {
         color: $disabled-color;
@@ -150,14 +148,14 @@ button.button-primary {
     }
     &:not([disabled]):hover {
         color: white;
-        background: darken($color-green, 0%);
+        background: darken($color-primary, 0%);
         .app-icon {
             stroke: white;
         }
     }
     &.outline {
         background: transparent;
-        color: $color-green;
+        color: $color-primary;
     }
 
     &.button-text {
@@ -276,6 +274,38 @@ a.link {
 
 .color-primary {
     color: $color-primary;
+}
+
+/* 
+	Input State
+	---------------------------------------------------
+*/
+
+.input-state {
+    border: 1px solid transparent;
+    color: $color-navy-dark;
+}
+
+.input-state:focus {
+    color: $color-navy-dark;
+    background: white;
+    background: rgba($color-primary-light, 0.25);
+    border: 1px solid $color-primary;
+    outline: none;
+}
+
+.input-state:focus + .app-icon {
+    stroke: $color-primary;
+    opacity: 1;
+}
+
+.input-state::placeholder  {
+    color: $color-gray;
+    font-family: $font-medium;
+}
+
+.input-state:focus::placeholder  {
+    color: rgba($color-primary, 1);
 }
 
 /* 

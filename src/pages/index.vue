@@ -1,12 +1,14 @@
 <template>
     <section :class='$route.name'>
-        <h3>Your Customized Stats:</h3>
+        <div></div>
+        <div></div>
+        <div></div>
     </section>
 </template>
 
 <script>
 export default {
-    name: 'Index',
+    name: 'Dashboard',
     middleware: 'route-auth',
 }
 </script>
@@ -15,5 +17,20 @@ export default {
 
 @import '../styles/vars';
 @import '../styles/mixins';
+
+section.index {
+    min-height: calc(100vh - #{vw(105 + 15)});
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: vw(15);
+    div {
+        border-radius: 3px;
+        padding: vw(20);
+        background: $color-gray-light;
+    }
+    div:first-child {
+        grid-column: 1/3;        
+    }
+}
 
 </style>

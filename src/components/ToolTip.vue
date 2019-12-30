@@ -59,6 +59,7 @@ export default {
     align-items: flex-start;
     justify-content: center;
     pointer-events: none;
+    user-select: none;
     z-index: 1337;
 }
 

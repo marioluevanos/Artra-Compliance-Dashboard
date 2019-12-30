@@ -26,7 +26,7 @@
         {
             "prop": "psarResolution",
             "header": "PSAR Resolution <small>Open/Not Assigned</small>",
-            "capsulate": "psarCapsulate"
+            "capsulate": "psarResolution"
         },
         {
             "prop": "tsar",
@@ -44,7 +44,6 @@
             "psarInitial": 18,
             "psarInitialText": "Pending",
             "psarResolution": "18 / 18",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -56,7 +55,6 @@
             "psarInitial": 17,
             "psarInitialText": "Pending",
             "psarResolution": "17 / 13",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -68,7 +66,6 @@
             "psarInitial": 17,
             "psarInitialText": "Filed",
             "psarResolution": "15 / 9",
-            "psarCapsulate": true,
             "tsar": "1 Pending",
             "tsarLinkTo": "investigations/F7B2"
         },
@@ -81,7 +78,6 @@
             "psarInitial": 8,
             "psarInitialText": "Filed",
             "psarResolution": "6 / 0",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -93,7 +89,6 @@
             "psarInitial": 17,
             "psarInitialText": "Filed",
             "psarResolution": "12 / 0",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -105,7 +100,6 @@
             "psarInitial": 9,
             "psarInitialText": "Filed",
             "psarResolution": "5 / 0",
-            "psarCapsulate": true,
             "tsar": "1 Filed",
             "tsarLinkTo": "summary"
         },
@@ -118,7 +112,6 @@
             "psarInitial": 9,
             "psarInitialText": "Filed",
             "psarResolution": "5 / 0",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -130,7 +123,6 @@
             "psarInitial": 7,
             "psarInitialText": "Filed",
             "psarResolution": "3 / 0",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -142,7 +134,6 @@
             "psarInitial": 17,
             "psarInitialText": "Filed",
             "psarResolution": "5 / 0",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -154,7 +145,6 @@
             "psarInitial": 12,
             "psarInitialText": "Filed",
             "psarResolution": "2 / 0",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -166,7 +156,6 @@
             "psarInitial": 11,
             "psarInitialText": "Filed",
             "psarResolution": "1 / 0",
-            "psarCapsulate": true,
             "tsar": 0
         },
         {
@@ -178,7 +167,6 @@
             "psarInitial": 17,
             "psarInitialText": "Filed",
             "psarResolution": "0 / 0",
-            "psarCapsulate": true,
             "tsar": 0
         }
     ]

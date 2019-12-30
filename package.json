@@ -6,7 +6,7 @@
     "dev": "cd \"src\" && npm run dev",
     "build": "npm run cleanfiles && npm run build:nuxt && npm run copyfiles",
     "serve": "firebase serve --only functions,hosting",
-    "deploy": "firebase deploy",
+    "deploy": "cd \"src\" && firebase deploy",
     "generate": "cd \"src\" && npm run generate",
     "cleanfiles": "npm run cleanclient && npm run cleanserver",
     "cleanclient": "rimraf client/*",

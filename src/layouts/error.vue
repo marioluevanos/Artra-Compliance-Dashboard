@@ -3,7 +3,7 @@
         <div class='message'>
             <h3>{{error.message}}</h3>
             <p>{{error.statusCode}}</p>
-            <a href='/'>Go to the Dashboard.</a>
+            <router-link to='/'>Go to the Dashboard.</router-link>
         </div>
     </main>
 </template>

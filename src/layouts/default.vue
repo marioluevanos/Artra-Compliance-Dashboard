@@ -32,7 +32,7 @@ export default {
 @import '../styles/mixins';
 
 .page:not(.login) {
-    padding: vw(105) vw(40) vw(40) vw(280);
+    padding: vw(105) vw(15) vw(15) vw(280);
 }
 
 </style>

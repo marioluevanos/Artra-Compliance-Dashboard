@@ -1,86 +1,137 @@
 <template>
-    <div 
-    class="drop-down" 
-    :class='{ 
-        active: showMenu, 
-        "has-selected": hasSelected
-    }'>
-        <li @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name !== undefined">
-            {{ selectedOption.name }}
-            <span class="caret"></span>
-        </li>
-        <li @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name === undefined">
-            {{placeholderText}}
-            <span class="caret"></span>
-        </li>
-        <ul class="dropdown-menu" v-if="showMenu">
-            <li v-for="(option, idx) in options" :key="idx" @click="updateOption(option)">
-                <a>{{ option.name }}</a>
+    <div class='input drop-down' 
+        :class='{ 
+            active: isActive, 
+            "has-selected": hasSelected
+        }'>
+        <button 
+            aria-haspopup='listbox' 
+            aria-labelledby='dd-list dd-list-button' 
+            :aria-expanded='isActive'
+            type='button' 
+            @click='isActive = !isActive' 
+            class='dropdown-toggle input-element input-state'>
+            {{ !selectedOption.name ? placeholderText : selectedOption.name }}
+            <span class='caret'/>
+        </button>
+        <ul 
+            class='dropdown-menu' 
+            v-show='isActive' 
+            tabindex='-1' 
+            role='listbox' 
+            aria-labelledby='dd-list-button'
+            ref='dropDownMenu'
+            :aria-activedescendant='slugify(selectedOption.name)'>
+            <li 
+                v-for='(option, idx) in options' 
+                :key='idx'
+                class='dropdown-item font-medium' 
+                tabindex='0'
+                @keydown='onListItemKeyDown'
+                @click='updateOption(option)' 
+                role='option'>
+                {{ option.name }}
             </li>
         </ul>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'drop-down',
-        data() {
-            return {
-                selectedOption: { name: '' },
-                showMenu: false,
-                placeholderText: 'Select Item',
-                hasSelected: false
+export default {
+    name: 'drop-down',
+    data() {
+        return {
+            selectedOption: { name: '' },
+            isActive: false,
+            placeholderText: 'Select Item',
+            hasSelected: false,
+            currentFocusedItem: null,
+            keyDown: 40,
+            keyUp: 38
+        }
+    },
+    props: {
+        options: {
+            type: [Array, Object]
+        },
+        selected: {},
+        placeholder: String,
+        closeOnOutsideClick: {
+            type: Boolean,
+            default: true,
+        },
+    },
+    watch: {
+        selectedOption(val) {
+            if (val.name !== this.placeholder) {
+                this.hasSelected = true
             }
         },
-        props: {
-            options: {
-                type: [Array, Object]
-            },
-            selected: {},
-            placeholder: [String],
-            closeOnOutsideClick: {
-                type: [Boolean],
-                default: true,
-            },
-        },
-        watch: {
-            selectedOption(val) {
-                if (val.name !== this.placeholder) {
-                    this.hasSelected = true
-                }
-            }
-        },
-        mounted() {
-            this.selectedOption = this.selected
-            if (this.placeholder) {
-                this.placeholderText = this.placeholder
-            }
+        isActive(val) {
+            if (val) {
+                document.addEventListener('keydown', this.onKeyDown)
+                document.addEventListener('keyup', this.onKeyUp)
 
-            if (this.closeOnOutsideClick) {
-              document.addEventListener('click', this.clickHandler)
+                this.$nextTick(() => this.setFirsItemFocus())
+            }
+            else {
+                document.removeEventListener('keydown', this.onKeyDown)
+            }
+        }
+    },
+    mounted() {
+        this.selectedOption = this.selected
+        if (this.placeholder) {
+            this.placeholderText = this.placeholder
+        }
+
+        if (this.closeOnOutsideClick) {
+            document.addEventListener('click', this.clickHandler)
+        }
+    },
+    beforeDestroy() {
+        document.removeEventListener('click', this.clickHandler)
+    },
+    methods: {
+        onKeyDown({keyCode}) {
+            if (keyCode === this.keyDown) {
+                const next = this.currentFocusedItem.nextElementSibling
+                if (next) this.currentFocusedItem = next
+                this.currentFocusedItem.focus()
             }
         },
-        beforeDestroy() {
-            document.removeEventListener('click', this.clickHandler)
+        onKeyUp({keyCode}) {
+            if (keyCode === this.keyUp) {
+                const prev = this.currentFocusedItem.previousSibling
+                if (prev) this.currentFocusedItem = prev
+                this.currentFocusedItem.focus()
+            }
         },
-        methods: {
-            updateOption(option) {
-                this.selectedOption = option
-                this.showMenu = false
-                this.$emit('updateOption', this.selectedOption)
-            },
-            toggleMenu() {
-              this.showMenu = !this.showMenu
-            },
-            clickHandler(event) {
-                const { target } = event
-                const { $el } = this
-                if (!$el.contains(target)) {
-                  this.showMenu = false
-                }
+        setFirsItemFocus() {
+            const {dropDownMenu} = this.$refs
+            this.currentFocusedItem = dropDownMenu.firstElementChild
+            this.currentFocusedItem.focus()
+        },
+        onListItemKeyDown(event) {
+            if (event.keyCode === 13) event.target.click()
+        },
+        slugify(name) {
+            return 'dd-list-' + name.toLowerCase().replace(/ /g, '-')
+        },
+        updateOption(option) {
+            this.selectedOption = option
+            this.isActive = false
+            this.$emit('updateOption', this.selectedOption)
+        },
+        clickHandler(event) {
+            const { target } = event
+            const { $el } = this
+            if (!$el.contains(target)) {
+                this.isActive = false
             }
         }
     }
+}
 </script>
 
 <style lang='scss'>
@@ -96,10 +147,6 @@
     background: white;
 }
 
-.drop-down a:hover {
-    text-decoration: none;
-}
-
 .dropdown-toggle {
     height: inherit;
     text-transform: none;
@@ -113,21 +160,39 @@
     background: white;
     font-family: $font-medium;
     color: $color-gray;
+    appearance: none;
+    border: none;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid transparent;
 }
 
 .dropdown-toggle:hover {
-    background: rgba($color-green-light, 0.15);
-    color: $color-green;
+    background: rgba($color-primary-light, 0.15);
+    color: $color-primary;
     cursor: pointer;
 }
 
+.dropdown-toggle:focus {
+    color: $color-navy-dark;
+    background: white;
+    background: rgba($color-primary-light, 0.25);
+    border: 1px solid $color-primary;
+}
+
+.dropdown-toggle:focus {
+    outline: none;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+}
+
 .drop-down.active .dropdown-toggle {
-    background: rgba($color-green-light, 0.15);
+    background: rgba($color-primary-light, 0.15);
     color: $color-navy-dark;
 }
 
 .drop-down.has-selected .dropdown-toggle {
-    color: $color-navy-dark;
+    color: $color-primary;
 }
 
 .dropdown-menu {
@@ -136,7 +201,7 @@
     left: 0;
     z-index: 1000;
     float: left;
-    min-width: 160px;
+    min-width: vw(180);
     padding: 0;
     margin: 0;
     list-style: none;
@@ -148,28 +213,27 @@
     background-clip: padding-box;
 }
 
-.dropdown-menu > li > a {
+.dropdown-item {
+    list-style: none;
+    border: 1px solid transparent;
     padding: vw(10) vw(15);
     display: block;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.6;
     white-space: nowrap;
-    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    color: $color-navy-dark;
+    outline: none;
 }
 
-.dropdown-menu > li > a:hover {
-    background: rgba($color-green-light, 0.15);
+.dropdown-item:hover,
+.dropdown-item:focus {
+    border: 1px solid $color-primary;
+    background: $color-primary;
+    color: white;
 }
 
-.dropdown-menu > li {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  margin: 0;
-}
-
-.caret {
+.dropdown-toggle .caret {
     width: 0;
     position: absolute;
     height: 0;
@@ -182,7 +246,4 @@
     right: vw(10);
 }
 
-li {
-    list-style: none;
-}
 </style>

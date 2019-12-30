@@ -6,7 +6,7 @@
 
 <script>
 import alertsData from '@/assets/data/alerts.json'
-import AppTable from '@/components/AppTable/index.vue'
+import AppTable from '@/components/AppTable/AppTable.vue'
 
 export default {
     name: 'Alerts',

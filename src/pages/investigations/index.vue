@@ -1,15 +1,13 @@
 <template>
     <section :class='$route.name'>
-        <AppTable :tableHeaders='investigations.tableHeaders' :tableData='investigations.tableData'>
-            
-        </AppTable>
+        <AppTable :tableHeaders='investigations.tableHeaders' :tableData='investigations.tableData'/>
     </section>
 </template>
 
 <script>
 import investigations from '@/assets/data/investigations.json'
 import {mapGetters} from 'vuex'
-import AppTable from '@/components/AppTable/index.vue'
+import AppTable from '@/components/AppTable/AppTable.vue'
 
 export default {
     name: 'Investigations',
@@ -17,14 +15,6 @@ export default {
     components: {
         AppTable
     },
-    // data() {
-    //     return {
-    //         investigations
-    //     }
-    // }
-    // async fetch({store, route}) {
-    //     await store.dispatch('loadInvestigationsId', route.params.id)
-    // },
     created() {
         this.$store.commit('PAGE_INVESTIGATIONS', investigations)
     },
@@ -33,6 +23,5 @@ export default {
             investigations: 'investigations'
         })
     }
-    
 }
 </script>

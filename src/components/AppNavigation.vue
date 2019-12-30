@@ -108,6 +108,7 @@ export default {
         transform: scale(0, 1);
         transform-origin: 0 50%;
         transition: all 0.3s ease-in;
+        border-radius: 0 3px 3px 0;
     }
 }
 
