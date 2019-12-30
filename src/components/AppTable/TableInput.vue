@@ -139,12 +139,17 @@ export default {
             const {inputType} = this
             if (inputType === 'History') {
                 const {action, comments} = this.newEntry
-                const isFormComplete = action !== undefined && comments !== undefined
+                const hasAction = action !== undefined 
+                const hasComment = comments !== undefined && (comments && comments.length > 0)
+                const isFormComplete = hasAction && hasComment
+
                 return isFormComplete
             }
             if (inputType === 'Decision') {
                 const {name, sarAction} = this.newEntry
-                const isFormComplete = name !== undefined && sarAction !== undefined
+                const hasName = name !== undefined && (name && name.length > 0)
+                const hasSarAction = sarAction !== undefined
+                const isFormComplete = hasName && hasSarAction
                 return isFormComplete
             }
             return false

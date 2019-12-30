@@ -76,6 +76,7 @@ export default {
             }
             else {
                 document.removeEventListener('keydown', this.onKeyDown)
+                document.removeEventListener('keyup', this.onKeyUp)
             }
         }
     },

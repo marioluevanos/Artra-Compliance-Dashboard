@@ -1,6 +1,6 @@
 <template>
     <nav class='app-navigation'>
-        <router-link class='navigation-link' v-for='link in pageLinks' :key='link.id' :to='link.href'>
+        <router-link class='navigation-link' v-for='link in pageLinks' :key='link.id' :to='link.href' tabindex='0'>
             <div class='navigation-icon'>
                 <span class='icon-count' v-if='link.icon === "alerts"'>2</span>
                 <AppIcon :type='link.icon'/>
@@ -93,10 +93,6 @@ export default {
     height: vw(56);
     padding: 0 vw(40);
     position: relative;
-    transition: color 0.3s ease-in;
-    .app-icon {
-        transition: all 0.3s ease-in;
-    }
     &:before {
         content: '';
         position: absolute;
@@ -115,11 +111,18 @@ export default {
 .navigation-link:hover {
     color: $color-primary;
     text-decoration: none;
-    transition: color 0.3s ease-out;
     .app-icon {
         stroke: $color-primary;
-        transition: all 0.3s ease-out;
     }    
+}
+
+.navigation-link:focus {
+    .navigation-text {
+        color: $color-primary;
+    }
+    .app-icon {
+        stroke: $color-primary;
+    }
 }
 
 .navigation-icon {

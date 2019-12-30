@@ -7,9 +7,11 @@
                 :format='header.format'
                 :key='Math.random() * hIdx'
                 :cellData='{ entry, header }'/>
-            <td v-if='entry.details' @click='toggleDetails' class='table-button'>
-                <ToolTip :message='detailsActive ? "Close" : "View Details"'/>
-                <AppIcon size='small' :type='detailsActive ? "close" : "show-list"'/>
+            <td v-if='entry.details' class='table-button'>
+                <button type='button' @click='toggleDetails'>
+                    <ToolTip :message='detailsActive ? "Close" : "View Details"'/>
+                    <AppIcon size='small' :type='detailsActive ? "close" : "show-list"'/>    
+                </button>
             </td>
         </tr>
         <tr class='table-body-details' v-if='entry.details && detailsActive' ref='tableBodyDetails'>
@@ -195,7 +197,7 @@ export default {
 
 .table-button {
     width: vw(46);
-    height: vw(46);
+    height: vw(42.5);
     padding: 0;
     position: absolute;
     background: none;
@@ -204,15 +206,26 @@ export default {
     border-left: 1px solid $color-gray-light;
     border-right: 1px solid $color-gray-light;
     outline-color: $color-primary;
-    pointer-events: all;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     outline: none;
     cursor: pointer;
-    * {
-        pointer-events: none;
+
+    button {
+        @include max-area;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border-radius: 0;
+        * {
+            pointer-events: none;
+        }
     }
+    
     &::before {
         content: '';
         position: absolute;
@@ -221,10 +234,15 @@ export default {
         background: $color-gray-light;
         display: none;
     }
-    &:hover {
+    button:hover,
+    button:focus  {
         .app-icon {
             stroke: $color-primary;
         }
+    }
+
+    button:focus {
+        border: 1px solid $color-primary;
     }
 }
 
