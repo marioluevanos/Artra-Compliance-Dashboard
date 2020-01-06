@@ -7,18 +7,17 @@
                     placeholder='Filter results' 
                     v-model='searchQuery'/>
                 <AppIcon type='search' size='small'/>
+                <AppIcon
+                    v-if='searchQuery.length > 0'
+                    type='cancel' size='small' @click.native='searchQuery = ""'/>
             </div>
-            <div class='date-range font-small' v-if='tableRange.from'>
+            <div class='date-range' v-if='tableRange.from'>
                 <label class='color-gray font-medium'>Date Range</label> 
-                {{tableRange.from}} to {{tableRange.to}}
-                <!-- <input 
-                    @change='() =>{}' 
-                    @input='() =>{}' 
-                    v-model='inputDateRangeValue' 
-                    type='range' 
-                    min='1' 
-                    :max='12' 
-                    step='1'/> -->
+                <div class='dates color-gray font-medium'>
+                    <span class='from' v-html='tableRange.from'/> 
+                    <span class='seperator'>—</span>
+                    <span class='to' v-html='tableRange.to'/>
+                </div>
             </div>
         </header>
         <table class='app-table'>
@@ -157,13 +156,34 @@ header.app-table-head {
     display: flex;
     align-items: center;
     width: 40%;
+    background: $color-gray-light;
+    border-radius: 3px;
     label {
         height: 100%;
         display: flex;
         align-items: center;
-        background: $color-gray-light;
+        background: darken($color-gray-light, 2.5%);
         padding: 0 vw(20);
         text-align: center;
+    }
+    .dates {
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 2px;
+        span.from {
+            margin-left: vw(15);
+        }
+        span {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .seperator {
+        margin: 0 vw(5);
     }
 }
 
@@ -190,9 +210,18 @@ header.app-table-head {
 
     .app-icon {
         position: absolute;
-        left: vw(15);
         opacity: 0.3;
         z-index: 1;
+    }
+
+    .app-icon.search {
+        left: vw(15);
+    }
+
+    .app-icon.cancel {
+        right: vw(15);
+        opacity: 1;
+        stroke: $color-primary;
     }
 }
 
