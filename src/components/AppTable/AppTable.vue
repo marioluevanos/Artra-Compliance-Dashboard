@@ -1,12 +1,26 @@
 <template>
     <div>
-        <div class='app-table-filter'>
-            <input 
-                class='input-state' 
-                placeholder='Filter results' 
-                v-model='searchQuery'/>
-            <AppIcon type='search' size='small'/>
-        </div>
+        <header class='app-table-head'>
+            <div class='app-table-filter'>
+                <input 
+                    class='input-state' 
+                    placeholder='Filter results' 
+                    v-model='searchQuery'/>
+                <AppIcon type='search' size='small'/>
+            </div>
+            <div class='date-range font-small' v-if='tableRange.from'>
+                <label class='color-gray font-medium'>Date Range</label> 
+                {{tableRange.from}} to {{tableRange.to}}
+                <!-- <input 
+                    @change='() =>{}' 
+                    @input='() =>{}' 
+                    v-model='inputDateRangeValue' 
+                    type='range' 
+                    min='1' 
+                    :max='12' 
+                    step='1'/> -->
+            </div>
+        </header>
         <table class='app-table'>
             <thead>
                 <tr>
@@ -28,6 +42,8 @@
                 </tr>
             </thead>
             <TableBody
+                :canEditDetails='canEditDetails'
+                :canAddDetails='canAddDetails'
                 :onSortClick='onSortClick'
                 v-for='(entry, idx) in filteredData'
                 :entry='entry'
@@ -49,8 +65,25 @@ export default {
         AppIcon
     },
     props: {
+        canEditDetails: {
+            type: Boolean,
+            default: true
+        },
+        canAddDetails: {
+            type: Boolean,
+            default: true
+        },
         tableData: Array,
-        tableHeaders: Array
+        tableHeaders: Array,
+        tableRange: {
+            type: Object,
+            default() {
+                return {
+                    from: '',
+                    to: ''
+                }
+            }
+        }
     },
     data() {
         const sortOrders = {}
@@ -60,7 +93,8 @@ export default {
             sortKey: '',
             sortOrders,
             searchQuery: '',
-            onSortClick: false
+            onSortClick: false,
+            inputDateRangeValue: ''
         }
     },
     computed: {
@@ -113,6 +147,26 @@ export default {
     width: 100%;
 }
 
+header.app-table-head {
+    display: flex;
+    margin-bottom: vw(5);
+}
+
+.date-range {
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    label {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background: $color-gray-light;
+        padding: 0 vw(20);
+        text-align: center;
+    }
+}
+
 .app-table-filter {
     display: flex;
     justify-content: flex-start;
@@ -121,7 +175,7 @@ export default {
     border-radius: 3px;
     position: relative;
     align-items: center;
-    margin-bottom: vw(5);
+    flex-grow: 1;
     input {
         background: $color-gray-light;
         width: 100%;

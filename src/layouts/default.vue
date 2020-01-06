@@ -5,18 +5,21 @@
         <main class='page' :class='$route.name'>
             <nuxt/>
         </main>
+        <ToastMessage/>
     </div>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader'
 import AppNavigation from '@/components/AppNavigation'
+import ToastMessage from '@/components/ToastMessage.vue'
 
 export default {
     name: 'layout-default',
     components: {
         AppHeader,
-        AppNavigation
+        AppNavigation,
+        ToastMessage
     },
     computed: {
         isLogin() {

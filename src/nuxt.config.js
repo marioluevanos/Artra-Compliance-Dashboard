@@ -31,7 +31,7 @@ export default {
     ** Plugins to load before mounting the App
     */
     plugins: [
-        { src: '~/plugins/vue-good-table', ssr: false }
+        // { src: '~/plugins/vue-good-table', ssr: false }
     ],
     /*
     ** Nuxt.js dev-modules

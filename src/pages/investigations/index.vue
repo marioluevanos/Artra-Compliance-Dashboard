@@ -1,6 +1,8 @@
 <template>
     <section :class='$route.name'>
-        <AppTable :tableHeaders='investigations.tableHeaders' :tableData='investigations.tableData'/>
+        <AppTable 
+            :tableHeaders='investigations.tableHeaders' 
+            :tableData='investigations.tableData'/>
     </section>
 </template>
 

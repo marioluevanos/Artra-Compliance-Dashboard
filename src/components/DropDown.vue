@@ -89,6 +89,8 @@ export default {
         if (this.closeOnOutsideClick) {
             document.addEventListener('click', this.clickHandler)
         }
+
+        this.$emit('updateOption', this.selectedOption)
     },
     beforeDestroy() {
         document.removeEventListener('click', this.clickHandler)
@@ -116,7 +118,7 @@ export default {
         onListItemKeyDown(event) {
             if (event.keyCode === 13) event.target.click()
         },
-        slugify(name) {
+        slugify(name = 'item') {
             return 'dd-list-' + name.toLowerCase().replace(/ /g, '-')
         },
         updateOption(option) {
@@ -140,7 +142,8 @@ export default {
 @import '../styles/vars';
 @import '../styles/mixins';
 
-.drop-down {
+div.input.drop-down {
+    padding: 0;
     height: 100%;
     position: relative;
     display: inline-block;
@@ -157,10 +160,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 vw(30) 0 vw(10);
+    padding: vw(10) vw(30) vw(10) vw(10);
     background: white;
     font-family: $font-medium;
-    color: $color-gray;
     appearance: none;
     border: none;
     width: 100%;
@@ -168,32 +170,12 @@ export default {
     border: 1px solid transparent;
 }
 
-.dropdown-toggle:hover {
-    background: rgba($color-primary-light, 0.15);
-    color: $color-primary;
-    cursor: pointer;
-}
-
-.dropdown-toggle:focus {
+.drop-down.has-selected.active .dropdown-toggle {
     color: $color-navy-dark;
     background: white;
     background: rgba($color-primary-light, 0.25);
     border: 1px solid $color-primary;
-}
-
-.dropdown-toggle:focus {
     outline: none;
-    color: $color-primary;
-    border: 1px solid $color-primary;
-}
-
-.drop-down.active .dropdown-toggle {
-    background: rgba($color-primary-light, 0.15);
-    color: $color-navy-dark;
-}
-
-.drop-down.has-selected .dropdown-toggle {
-    color: $color-primary;
 }
 
 .dropdown-menu {

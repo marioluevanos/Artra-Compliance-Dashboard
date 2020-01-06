@@ -119,6 +119,25 @@
             <circle cx="7.5" cy="7.5" r="6"></circle>
             <line x1="15.5" y1="15.5" x2="11.742" y2="11.742"></line>
         </g>
+        <g v-if='type === "edit"'>
+            <line x1="13" y1="7" x2="9" y2="3"></line>
+            <polygon points="5.5 14.5 0.5 15.5 1.5 10.5 11.5 0.5 15.5 4.5 5.5 14.5" ></polygon>
+        </g>
+        <g v-if='type === "delete"'>
+            <path d="M2.5,5.5v8a2,2,0,0,0,2,2h7a2,2,0,0,0,2-2v-8"></path>
+            <line x1="1.5" y1="3.5" x2="14.5" y2="3.5"></line>
+            <polyline points="5.5 3.5 5.5 0.5 10.5 0.5 10.5 3.5"></polyline>
+            <line x1="5.5" y1="12.5" x2="10.5" y2="7.5"></line>
+            <line x1="10.5" y1="12.5" x2="5.5" y2="7.5"></line>
+        </g>
+        <g v-if='type === "success"'>
+            <polyline points="1,9 5,13 15,3 "></polyline>
+        </g>
+        <g v-if='type === "options"'>
+            <circle cx="8" cy="8" r="1.5"></circle>
+            <circle cx="14" cy="8" r="1.5"></circle>
+            <circle cx="2" cy="8" r="1.5"></circle>
+        </g>
     </svg>
 </template>
 
@@ -155,7 +174,10 @@ export default {
     width: vw(20);
     height: vw(20);
     stroke: $color-navy-dark;
-    transition: all 0.15s ease-out;
+    overflow: visible;
+    transition: 
+        stroke 0.15s ease-out,
+        fill 0.15s ease-out;
     .fill {
         stroke: none;
         fill: $color-navy-dark;

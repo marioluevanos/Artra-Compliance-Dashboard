@@ -1,6 +1,10 @@
 <template>
     <section :class='$route.name'>
-        <AppTable :tableHeaders='alertsData.tableHeaders' :tableData='alertsData.tableData'/>
+        <AppTable 
+            :canAddDetails='false'
+            :canEditDetails='false'
+            :tableHeaders='alertsData.tableHeaders' 
+            :tableData='alertsData.tableData'/>
     </section>
 </template>
 

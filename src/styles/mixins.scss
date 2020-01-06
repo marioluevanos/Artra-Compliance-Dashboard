@@ -89,7 +89,7 @@ $vw-default: 1280;
 
     @else if $size=='small' {
         line-height: 1.45;
-        @include fluid-type(12px, 14px);
+        @include fluid-type(11px, 14px);
     }
 
     @else if $size=='xsmall' {

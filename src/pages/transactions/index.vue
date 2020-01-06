@@ -1,6 +1,7 @@
 <template>
     <section :class='$route.name'>
         <AppTable 
+            :tableRange='transactionData.range'
             :tableHeaders='transactionData.tableHeaders'
             :tableData='transactionData.tableData'/>
     </section>

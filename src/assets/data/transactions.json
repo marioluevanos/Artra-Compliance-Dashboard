@@ -1,9 +1,9 @@
 {
+    "range": {
+        "from": "12/03/19",
+        "to": "12/10/19"
+    },
     "tableHeaders": [
-        {
-            "prop": "date",
-            "header": "Date"
-        },
         {
             "prop": "merchant",
             "header": "Merchant",
@@ -25,68 +25,92 @@
     ],
     "tableData": [
         {
+            "date": "12/03/2019",
+            "merchant": "Can Wagon",
+            "txValue": 1407.00,
+            "txCount": 5,
+            "psarsOpen": 1,
+            "linkTo": "/transactions/can-wagon?txcount=5&date=120710&txvalue=1407.00"
+        },
+        {
             "date": "12/03/19",
             "merchant": "The Spot",
-            "txValue": 240.11,
-            "txCount": 103,
+            "txValue": 434.22,
+            "txCount": 3,
             "psarsOpen": 1,
-            "linkTo": "transactions/the-spot"
+            "linkTo": "/transactions/the-spot?txcount=3&date=120310&txvalue=434.22"
         },
         {
-            "date": "12/03/19",
-            "merchant": "Mission Dispensary",
-            "txValue": 705.11,
-            "txCount": 30,
-            "psarsOpen": 2,
-            "linkTo": "transactions/mission-dispensary"
-        },
-        {
-            "date": "12/03/19",
+            "date": "12/04/19",
             "merchant": "Haverst Room",
-            "txValue": 210.33,
+            "txValue": 1210.33,
             "txCount": 11,
-            "psarsOpen": 0,
-            "linkTo": "transactions/harvest-room"
+            "psarsOpen": 2,
+            "linkTo": "/transactions/harvest-room?txcount=11&date=120410&txvalue=1210.33"
         },
         {
-            "date": "12/03/19",
+            "date": "12/04/19",
             "merchant": "The MJ Lounge",
-            "txValue": 510.10,
-            "txCount": 31,
-            "psarsOpen": 0,
-            "linkTo": "transactions/the-mj-lounge"
+            "txValue": 570.50,
+            "txCount": 5,
+            "psarsOpen": 2,
+            "linkTo": "/transactions/the-mj-lounge?txcount=5&date=120410&txvalue=570.50"
         },
         {
-            "date": "12/03/19",
+            "date": "12/04/19",
             "merchant": "CDB Online",
-            "txValue": 290.10,
-            "txCount": 15,
-            "psarsOpen": 0,
-            "linkTo": "transactions/cbd-online"
+            "txValue": 1290.10,
+            "txCount": 6,
+            "psarsOpen": 1,
+            "linkTo": "/transactions/cbd-online?txcount=6&date=120410&txvalue=1290.10"
         },
         {
-            "date": "12/03/19",
+            "date": "12/05/19",
             "merchant": "MediCan",
-            "txValue": 140.11,
-            "txCount": 40,
-            "psarsOpen": 0,
-            "linkTo": "transactions/medican"
+            "txValue": 2140.11,
+            "txCount": 4,
+            "psarsOpen": 1,
+            "linkTo": "/transactions/medican?txcount=4&date=120510&txvalue=2140.11"
         },
         {
-            "date": "12/03/19",
+            "date": "12/05/19&date=120510",
             "merchant": "SC Remedies",
-            "txValue": 153.00,
-            "txCount": 50,
-            "psarsOpen": 0,
-            "linkTo": "transactions/sc-remedies"
+            "txValue": 2153.00,
+            "txCount": 8,
+            "psarsOpen": 1,
+            "linkTo": "/transactions/sc-remedies?txcount=8&date=120510&txvalue=2153.00"
         },
         {
-            "date": "12/03/19",
+            "date": "12/05/19",
+            "merchant": "Health Center, LLC",
+            "txValue": 1300.50,
+            "txCount": 5,
+            "psarsOpen": 1,
+            "linkTo": "/transactions/health-center-llc?txcount=5&date=120510&txvalue=1300.50"
+        },
+        {
+            "date": "12/06/19",
             "merchant": "Oak Delivery",
-            "txValue": 310.33,
-            "txCount": 14,
-            "psarsOpen": 0,
-            "linkTo": "transactions/oak-delivery"
+            "txValue": 502.92,
+            "txCount": 5,
+            "psarsOpen": 1,
+            "linkTo": "/transactions/oak-delivery?txcount=5&date=120610&txvalue=502.92"
+        },
+        {
+            "date": "12/06/19",
+            "merchant": "Mission Dispensary",
+            "txValue": 202.18,
+            "txCount": 3,
+            "psarsOpen": 1,
+            "linkTo": "/transactions/mission-dispensary?txcount=3&date=120410&txvalue=202.18"
+        },
+        {
+            "date": "12/06/19",
+            "merchant": "MJ Health",
+            "txValue": 1133.04,
+            "txCount": 4,
+            "psarsOpen": 1,
+            "linkTo": "/transactions/mj-health?txcount=4&date=120410&txvalue=1133.04"
         }
     ]
 }

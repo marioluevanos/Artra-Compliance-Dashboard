@@ -1,11 +1,11 @@
 <template>
     <section :class='$route.name'>
-        <AppTable :tableHeaders='investigationsId.tableHeaders' :tableData='investigationsId.tableData'/>
+        <AppTable :tableHeaders='investigations.tableHeaders' :tableData='currentInvestigationData'/>
     </section>
 </template>
 
 <script>
-import investigationsId from '@/assets/data/investigation-id.json'
+import investigations from '@/assets/data/investigations.json'
 import AppTable from '@/components/AppTable/AppTable.vue'
 import {mapGetters} from 'vuex'
 
@@ -15,16 +15,17 @@ export default {
     components: {
         AppTable
     },
-    // async fetch({store, route}) {
-    //     await store.dispatch('loadInvestigationsId', route.params.id)
-    // },
     created() {
-        this.$store.commit('PAGE_INVESTIGATIONS_ID', investigationsId)
+        this.$store.commit('PAGE_INVESTIGATIONS', investigations)
     },
     computed: {
         ...mapGetters({
-            investigationsId: 'investigationsId'
-        })
+            investigations: 'investigations'
+        }),
+        currentInvestigationData() {
+            const {id} = this.$route.params
+            return investigations.tableData.filter(data => data.txId === id)
+        }
     }
 }
 </script>

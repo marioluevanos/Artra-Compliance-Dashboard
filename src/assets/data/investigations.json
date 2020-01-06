@@ -10,7 +10,8 @@
         },
         {
             "prop": "txId",
-            "header": "TX ID"
+            "header": "TX ID",
+            "linkTo": "linkTo"
         },
         {
             "prop": "receiver",
@@ -33,93 +34,606 @@
     ],
     "tableData": [
         {
+            "dueDate": "12/06/2019",
+            "txDate": "12/03/2019",
+            "txId": "F7B2",
+            "linkTo": "/transactions/can-wagon?txcount=5&date=120710&txvalue=1407.00",
+            "receiver": "Can Wagon",
+            "sender": "Tom Jones",
+            "amount": 407.45,
+            "assigned": "Judy Miller",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "date": "12/03/2019",
+                            "action": "Account Review",
+                            "comments": "Account manager recommends terminating both parties"
+                        },
+                        {
+                            "date": "11/29/2019",
+                            "action": "Account Review",
+                            "comments": "Submitted findings to account manager"
+                        },
+                        {
+                            "date": "11/24/2019",
+                            "action": "History Check",
+                            "comments": "Merchant has 8 prior investigations for looping in last 30 days"
+                        },
+                        {
+                            "date": "11/23/2019",
+                            "action": "History Check",
+                            "comments": "Customer has two prior investigations for looping"
+                        }
+                    ]
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "header": "Date",
+                            "prop": "date"
+                        },
+                        {
+                            "header": "Name",
+                            "prop": "name"
+                        },
+                        {
+                            "header": "SAR Action",
+                            "prop": "sarAction"
+                        },
+                        {
+                            "header": "SAR Status",
+                            "prop": "sarStatus"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "date": "12/04/2019",
+                            "name": "Judy Miller",
+                            "sarAction": "File Updated PSAR",
+                            "sarStatus": "TSAR Pending"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "dueDate": "12/21/2019",
             "txDate": "12/6/2019",
             "txId": "8392",
+            "linkTo": "/transactions/the-spot?txcount=3&date=120310&txvalue=434.22",
             "receiver": "The Spot",
             "sender": "Dave Black",
             "amount": 134.22,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/21/2019",
             "txDate": "12/6/2019",
             "txId": "F8E9",
+            "linkTo": "/transactions/harvest-room?txcount=11&date=120610&txvalue=1210.33",
             "receiver": "Harvest Room",
             "sender": "Mike Jones",
             "amount": 210.25,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/21/2019",
             "txDate": "12/6/2019",
             "txId": "CC90",
+            "linkTo": "/transactions/harvest-room?txcount=11&date=120610&txvalue=1210.33",
             "receiver": "Harvest Room",
             "sender": "Mike Jones",
             "amount": 210.25,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/21/2019",
             "txDate": "12/6/2019",
             "txId": "049A",
+            "linkTo": "/transactions/the-mj-lounge?txcount=5&date=120410&txvalue=570.50",
             "receiver": "The MJ Lounge",
             "sender": "Steve Smith",
             "amount": 230.90,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/21/2019",
             "txDate": "12/6/2019",
             "txId": "7876",
+            "linkTo": "/transactions/cbd-online?txcount=15&date=120410&txvalue=1290.10",
             "receiver": "CBD Online",
             "sender": "Ted Thomas",
             "amount": 242.07,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/21/2019",
             "txDate": "12/6/2019",
             "txId": "7876",
+            "linkTo": "/transactions/mj-health?txcount=4&date=120410&txvalue=1133.04",
             "receiver": "MJ Health",
             "sender": "June Jones",
             "amount": 133.04,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/21/2019",
             "txDate": "12/6/2019",
             "txId": "218D",
+            "linkTo": "/transactions/oak-delivery?txcount=5&date=120610&txvalue=502.92",
             "receiver": "Oak Delivery",
             "sender": "Ralph Misner",
             "amount": 102.92,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/21/2019",
             "txDate": "12/6/2019",
             "txId": "D07B",
+            "linkTo": "/transactions/medican?txcount=4&date=120510&txvalue=2140.11",
             "receiver": "MediCan",
             "sender": "Ron White",
             "amount": 197.82,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/20/2019",
             "txDate": "12/5/2019",
             "txId": "BFA5",
+            "linkTo": "/transactions/health-center-llc?txcount=5&date=120410&txvalue=300.50",
             "receiver": "Health Center, LLC",
             "sender": "James Jefferson",
             "amount": 89.60,
-            "assigned": "Unassigned"
+            "assigned": "Unassigned",
+            "details": [
+                {
+                    "title": "History",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "action",
+                            "header": "Action"
+                        },
+                        {
+                            "prop": "comments",
+                            "header": "Comments"
+                        }
+                    ],
+                    "data": []
+                },
+                {
+                    "title": "Decision",
+                    "headers": [
+                        {
+                            "prop": "date",
+                            "header": "Date"
+                        },
+                        {
+                            "prop": "name",
+                            "header": "Name"
+                        },
+                        {
+                            "prop": "sarAction",
+                            "header": "SAR Action"
+                        },
+                        {
+                            "prop": "sarStatus",
+                            "header": "SAR Status"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Unassigned",
+                            "sarStatus": "PSAR Pending"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "dueDate": "12/20/2019",
             "txDate": "12/5/2019",
             "txId": "9894",
+            "linkTo": "/transactions/the-mj-lounge?txcount=5&date=120410&txvalue=570.50",
             "receiver": "The MJ Lounge",
             "sender": "Greg Green",
-            "amount": 114.30,
+            "amount": 114.10,
             "assigned": "James Jones",
             "details": [
                 {
@@ -191,6 +705,7 @@
             "dueDate": "12/20/2019",
             "txDate": "12/5/2019",
             "txId": "6135",
+            "linkTo": "/transactions/mission-dispensary?txcount=3&date=120410&txvalue=202.18",
             "receiver": "Misson Dispensary",
             "sender": "Ally McCord",
             "amount": 102.18,
@@ -212,7 +727,13 @@
                             "header": "Comments"
                         }
                     ],
-                    "data": []
+                    "data": [
+                        {
+                            "date": "12/06/2019",
+                            "action": "Purchase Check",
+                            "comments": "Product purchase confirmed"
+                        }
+                    ]
                 },
                 {
                     "title": "Decision",
@@ -234,7 +755,14 @@
                             "header": "SAR Status"
                         }
                     ],
-                    "data": []
+                    "data": [
+                        {
+                            "date": "12/05/2019",
+                            "name": "Alice Wonder",
+                            "sarAction": "File Updated PSAR",
+                            "sarStatus": "Updated PSAR Pending"
+                        }
+                    ]
                 }
             ]
         },
@@ -242,6 +770,7 @@
             "dueDate": "12/20/2019",
             "txDate": "12/5/2019",
             "txId": "21FD",
+            "linkTo": "/transactions/sc-remedies?txcount=8&date=120510&txvalue=2153.00",
             "receiver": "SC Remedies",
             "sender": "Bo Diddly",
             "amount": 273.80,
@@ -263,7 +792,13 @@
                             "header": "Comments"
                         }
                     ],
-                    "data": []
+                    "data": [
+                        {
+                            "date": "12/06/2019",
+                            "action": "Purchase Check",
+                            "comments": "Product purchase confirmed"
+                        }
+                    ]
                 },
                 {
                     "title": "Decision",
@@ -285,7 +820,14 @@
                             "header": "SAR Status"
                         }
                     ],
-                    "data": []
+                    "data": [
+                        {
+                            "date": "12/05/2019",
+                            "name": "Judy Miller",
+                            "sarAction": "File Updated PSAR",
+                            "sarStatus": "Updated PSAR Pending"
+                        }
+                    ]
                 }
             ]
         }

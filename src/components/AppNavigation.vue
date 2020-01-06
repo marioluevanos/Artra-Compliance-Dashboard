@@ -64,7 +64,7 @@ export default {
             const {$route} = this
             // Return if the login route, don't need to record that as history
             if (/login/.test($route.name)) return
-            const route = { name: $route.name }
+            const route = { name: !$route.name ? 'login' : $route.name }
             const data = JSON.stringify(route)
             window.sessionStorage.setItem('arta-admin', data)
         }
