@@ -33,7 +33,6 @@
                         format='MM/dd/yyyy'
                         v-if='isEditing && inputPreferDate(header.prop)'
                         :name='detail[header.prop]'/>
-
                 </div>
             </td>
             <td class='edit-control' v-if='canEditDetails'>
@@ -219,7 +218,6 @@ export default {
                 return input
             })
         },
-        
         closeContextMenu(event) {
             const { target } = event
             const { $el } = this

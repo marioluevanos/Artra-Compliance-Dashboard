@@ -262,7 +262,7 @@ export default {
     outline: none;
     cursor: pointer;
     z-index: 2;
-    opacity: 0;
+    // opacity: 0;
     button {
         @include max-area;
         display: flex;

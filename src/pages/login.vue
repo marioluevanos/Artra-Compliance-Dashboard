@@ -24,8 +24,11 @@
                 <AppIcon type='password-hide' @click.native='isPasswordVisible = !isPasswordVisible' v-if='!isPasswordVisible'/>
                 <AppIcon type='password-see' @click.native='isPasswordVisible = !isPasswordVisible' v-if='isPasswordVisible'/>
             </label>
-            <button class='button-large button-default' type='submit' v-if='!formSubmitted'>{{ user ? 'Success' : 'Login' }}</button>
-            <button class='button-large button-default' type='submit' disabled v-else>Authenticating...</button>
+            <button 
+                class='button-large button-default'
+                :disabled='formSubmitted' 
+                type='submit'>{{ !formSubmitted ? (user ? 'Success' : 'Login') : 'Authenticating...'}}
+            </button>
         </form>
         <footer ref='footer'>
             <a href='#'>Terms of Use</a>
@@ -78,7 +81,7 @@ export default {
         rememberRoute() {
             const item = JSON.parse(window.sessionStorage.getItem('arta-admin')) || {}
             const { name = 'summary' } = item
-            this.$router.push({ name, params: { id: 'F7B2' } })
+            this.$router.push({ name })
         },
         mountedTimeline() {
             return gsap.fromTo(this.$el, { opacity: 0 }, { opacity: 1, delay: 0.3, duration: 1, ease: 'expo.out' })

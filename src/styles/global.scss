@@ -89,6 +89,7 @@ button {
     padding: vw(10) vw(20);
     transition: 0.10s linear;
     display: flex;
+    align-items: center;
     font-family: $font-medium;
     outline: none;
     user-select: none;
