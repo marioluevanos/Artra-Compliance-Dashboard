@@ -81,7 +81,7 @@ export default {
         rememberRoute() {
             const item = JSON.parse(window.sessionStorage.getItem('arta-admin')) || {}
             const { name = 'summary' } = item
-            this.$router.push({ name })
+            this.$router.push({ name, params: {id: ''} })
         },
         mountedTimeline() {
             return gsap.fromTo(this.$el, { opacity: 0 }, { opacity: 1, delay: 0.3, duration: 1, ease: 'expo.out' })
