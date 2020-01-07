@@ -14,7 +14,7 @@ Summary
 <img src="https://artra-pay.web.app/screen-shots/summary.jpg" alt="Summary"/>
 
 Investigations
-<img src="https://artra-pay.web.app/screen-shots/investigations.jpg" alt="Investigations"/>
+<img src="https://artra-pay.web.app/screen-shots/investigations.jpg?1" alt="Investigations"/>
 
 Investigations ID
 <img src="https://artra-pay.web.app/screen-shots/investigations-id.jpg" alt="Investigations Id"/>
